@@ -1,0 +1,797 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2868
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Italic;}
+{\colortbl;\red255\green255\blue255;\red123\green9\blue2;\red255\green255\blue255;\red79\green84\blue87;
+\red14\green110\blue109;\red14\green105\blue47;\red103\green0\blue124;\red37\green0\blue124;\red0\green21\blue124;
+\red162\green64\blue4;\red121\green213\blue255;\red252\green120\blue8;}
+{\*\expandedcolortbl;;\cssrgb\c56078\c8235\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c38431\c40392\c41569;
+\cssrgb\c0\c50196\c50196;\cssrgb\c0\c47843\c23922;\cssrgb\c48627\c0\c56078;\cssrgb\c19608\c0\c56078;\cssrgb\c0\c14902\c56078;
+\cssrgb\c70196\c32549\c0;\cssrgb\c53725\c86667\c100000;\cssrgb\c100000\c54902\c0;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 export\cf4 \strokec4  \cf2 \strokec2 default\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf2 \strokec2 async\cf4 \strokec4  \cf6 \strokec6 fetch\cf5 \strokec5 (\cf7 \strokec7 request\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 env\cf5 \strokec5 )\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 try\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3       \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 url\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 new\cf8 \strokec8  \cf6 \strokec6 URL\cf8 \strokec8 (\cf9 \strokec9 request\cf5 \strokec5 .\cf9 \strokec9 url\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\cb3       \cf2 \strokec2 if\cf4 \strokec4  (\cf9 \strokec9 request\cf5 \strokec5 .\cf9 \strokec9 method\cf4 \strokec4  \cf2 \strokec2 ===\cf4 \strokec4  \cf10 \strokec10 "GET"\cf4 \strokec4  \cf2 \strokec2 &&\cf4 \strokec4  \cf9 \strokec9 url\cf5 \strokec5 .\cf9 \strokec9 pathname\cf4 \strokec4  \cf2 \strokec2 ===\cf4 \strokec4  \cf10 \strokec10 "/"\cf4 \strokec4 ) \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3         \cf2 \strokec2 return\cf4 \strokec4  \cf2 \strokec2 new\cf4 \strokec4  \cf6 \strokec6 Response\cf4 \strokec4 (\cf9 \strokec9 SENDER_HTML\cf5 \strokec5 ,\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3           headers\cf5 \strokec5 :\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \strokec4  \cf10 \strokec10 "content-type"\cf5 \strokec5 :\cf4 \strokec4  \cf10 \strokec10 "text/html; charset=utf-8"\cf4 \strokec4  \cf5 \strokec5 \},\cf4 \cb1 \strokec4 \
+\cb3         \cf5 \strokec5 \}\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3       \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\cb3       \cf2 \strokec2 if\cf4 \strokec4  (\cf9 \strokec9 request\cf5 \strokec5 .\cf9 \strokec9 method\cf4 \strokec4  \cf2 \strokec2 ===\cf4 \strokec4  \cf10 \strokec10 "GET"\cf4 \strokec4  \cf2 \strokec2 &&\cf4 \strokec4  \cf9 \strokec9 url\cf5 \strokec5 .\cf9 \strokec9 pathname\cf5 \strokec5 .\cf6 \strokec6 startsWith\cf4 \strokec4 (\cf10 \strokec10 "/v/"\cf4 \strokec4 )) \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3         \cf2 \strokec2 return\cf4 \strokec4  \cf2 \strokec2 new\cf4 \strokec4  \cf6 \strokec6 Response\cf4 \strokec4 (\cf9 \strokec9 VIEWER_HTML\cf5 \strokec5 ,\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3           headers\cf5 \strokec5 :\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \strokec4  \cf10 \strokec10 "content-type"\cf5 \strokec5 :\cf4 \strokec4  \cf10 \strokec10 "text/html; charset=utf-8"\cf4 \strokec4  \cf5 \strokec5 \},\cf4 \cb1 \strokec4 \
+\cb3         \cf5 \strokec5 \}\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3       \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\cb3       \cf2 \strokec2 if\cf4 \strokec4  (\cf9 \strokec9 request\cf5 \strokec5 .\cf9 \strokec9 method\cf4 \strokec4  \cf2 \strokec2 ===\cf4 \strokec4  \cf10 \strokec10 "POST"\cf4 \strokec4  \cf2 \strokec2 &&\cf4 \strokec4  \cf9 \strokec9 url\cf5 \strokec5 .\cf9 \strokec9 pathname\cf4 \strokec4  \cf2 \strokec2 ===\cf4 \strokec4  \cf10 \strokec10 "/api/create"\cf4 \strokec4 ) \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3         \cf2 \strokec2 return\cf4 \strokec4  \cf2 \strokec2 await\cf4 \strokec4  \cf6 \strokec6 handleCreate\cf4 \strokec4 (\cf2 \strokec2 request\cf5 \strokec5 ,\cf4 \strokec4  \cf2 \strokec2 env\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3       \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\cb3       \cf2 \strokec2 if\cf4 \strokec4  (\cf9 \strokec9 request\cf5 \strokec5 .\cf9 \strokec9 method\cf4 \strokec4  \cf2 \strokec2 ===\cf4 \strokec4  \cf10 \strokec10 "GET"\cf4 \strokec4  \cf2 \strokec2 &&\cf4 \strokec4  \cf9 \strokec9 url\cf5 \strokec5 .\cf9 \strokec9 pathname\cf5 \strokec5 .\cf6 \strokec6 startsWith\cf4 \strokec4 (\cf10 \strokec10 "/api/claim/"\cf4 \strokec4 )) \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3         \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 token\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf6 \strokec6 decodeURIComponent\cf8 \strokec8 (\cf9 \strokec9 url\cf5 \strokec5 .\cf9 \strokec9 pathname\cf5 \strokec5 .\cf6 \strokec6 split\cf8 \strokec8 (\cf10 \strokec10 "/"\cf8 \strokec8 )\cf5 \strokec5 .\cf6 \strokec6 pop\cf8 \strokec8 () \cf2 \strokec2 ||\cf8 \strokec8  \cf10 \strokec10 ""\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3         \cf2 \strokec2 return\cf4 \strokec4  \cf2 \strokec2 await\cf4 \strokec4  \cf6 \strokec6 handleClaim\cf4 \strokec4 (\cf2 \strokec2 token\cf5 \strokec5 ,\cf4 \strokec4  \cf2 \strokec2 env\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3       \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\cb3       \cf2 \strokec2 return\cf4 \strokec4  \cf2 \strokec2 new\cf4 \strokec4  \cf6 \strokec6 Response\cf4 \strokec4 (\cf10 \strokec10 "Not found"\cf5 \strokec5 ,\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \strokec4  status\cf5 \strokec5 :\cf4 \strokec4  \cf7 \strokec7 404\cf4 \strokec4  \cf5 \strokec5 \}\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf5 \strokec5 \}\cf4 \strokec4  \cf2 \strokec2 catch\cf4 \strokec4  (\cf2 \strokec2 e\cf4 \strokec4 ) \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3       \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 msg\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 e\cf8 \strokec8  \cf2 \strokec2 instanceof\cf8 \strokec8  \cf6 \strokec6 Error\cf8 \strokec8  \cf2 \strokec2 ?\cf8 \strokec8  (\cf9 \strokec9 e\cf5 \strokec5 .\cf9 \strokec9 stack\cf8 \strokec8  \cf2 \strokec2 ||\cf8 \strokec8  \cf9 \strokec9 e\cf5 \strokec5 .\cf9 \strokec9 message\cf8 \strokec8 ) \cf2 \strokec2 :\cf8 \strokec8  \cf6 \strokec6 String\cf8 \strokec8 (\cf2 \strokec2 e\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3       \cf9 \strokec9 console\cf5 \strokec5 .\cf6 \strokec6 error\cf4 \strokec4 (\cf10 \strokec10 "TOP_LEVEL_ERROR"\cf5 \strokec5 ,\cf4 \strokec4  \cf2 \strokec2 msg\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3       \cf2 \strokec2 return\cf4 \strokec4  \cf6 \strokec6 json\cf4 \strokec4 (\cf5 \strokec5 \{\cf4 \strokec4  error\cf5 \strokec5 :\cf4 \strokec4  \cf10 \strokec10 "Internal error"\cf5 \strokec5 ,\cf4 \strokec4  detail\cf5 \strokec5 :\cf4 \strokec4  \cf2 \strokec2 msg\cf4 \strokec4  \cf5 \strokec5 \},\cf4 \strokec4  \cf7 \strokec7 500\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
+\cb3   \cf5 \strokec5 \},\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 \};\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 function\cf4 \strokec4  \cf6 \strokec6 json\cf5 \strokec5 (\cf7 \strokec7 data\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 status\cf4 \strokec4  \cf2 \strokec2 =\cf4 \strokec4  \cf7 \strokec7 200\cf5 \strokec5 )\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf2 \strokec2 return\cf4 \strokec4  \cf2 \strokec2 new\cf4 \strokec4  \cf6 \strokec6 Response\cf4 \strokec4 (\cf9 \strokec9 JSON\cf5 \strokec5 .\cf6 \strokec6 stringify\cf4 \strokec4 (\cf2 \strokec2 data\cf4 \strokec4 )\cf5 \strokec5 ,\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 status\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cb3     headers\cf5 \strokec5 :\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \strokec4  \cf10 \strokec10 "content-type"\cf5 \strokec5 :\cf4 \strokec4  \cf10 \strokec10 "application/json; charset=utf-8"\cf4 \strokec4  \cf5 \strokec5 \},\cf4 \cb1 \strokec4 \
+\cb3   \cf5 \strokec5 \}\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 function\cf4 \strokec4  \cf6 \strokec6 b64url\cf5 \strokec5 (\cf7 \strokec7 bytes\cf5 \strokec5 )\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf2 \strokec2 let\cf8 \strokec8  \cf2 \strokec2 s\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf6 \strokec6 btoa\cf8 \strokec8 (\cf9 \strokec9 String\cf5 \strokec5 .\cf6 \strokec6 fromCharCode\cf8 \strokec8 (\cf2 \strokec2 ...bytes\cf8 \strokec8 ))\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 return\cf4 \strokec4  \cf9 \strokec9 s\cf5 \strokec5 .\cf6 \strokec6 replace\cf4 \strokec4 (\cf10 \strokec10 /\cf11 \strokec11 \\+\cf10 \strokec10 /\cf9 \strokec9 g\cf5 \strokec5 ,\cf4 \strokec4  \cf10 \strokec10 "-"\cf4 \strokec4 )\cf5 \strokec5 .\cf6 \strokec6 replace\cf4 \strokec4 (\cf10 \strokec10 /\cf11 \strokec11 \\/\cf10 \strokec10 /\cf9 \strokec9 g\cf5 \strokec5 ,\cf4 \strokec4  \cf10 \strokec10 "_"\cf4 \strokec4 )\cf5 \strokec5 .\cf6 \strokec6 replace\cf4 \strokec4 (\cf10 \strokec10 /\cf11 \strokec11 =\cf2 \strokec2 +$\cf10 \strokec10 /\cf9 \strokec9 g\cf5 \strokec5 ,\cf4 \strokec4  \cf10 \strokec10 ""\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 function\cf4 \strokec4  \cf6 \strokec6 unb64url\cf5 \strokec5 (\cf7 \strokec7 s\cf5 \strokec5 )\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf2 \strokec2 s\cf4 \strokec4  \cf2 \strokec2 =\cf4 \strokec4  \cf9 \strokec9 s\cf5 \strokec5 .\cf6 \strokec6 replace\cf4 \strokec4 (\cf10 \strokec10 /\cf11 \strokec11 -\cf10 \strokec10 /\cf9 \strokec9 g\cf5 \strokec5 ,\cf4 \strokec4  \cf10 \strokec10 "+"\cf4 \strokec4 )\cf5 \strokec5 .\cf6 \strokec6 replace\cf4 \strokec4 (\cf10 \strokec10 /\cf11 \strokec11 _\cf10 \strokec10 /\cf9 \strokec9 g\cf5 \strokec5 ,\cf4 \strokec4  \cf10 \strokec10 "/"\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 while\cf4 \strokec4  (\cf9 \strokec9 s\cf5 \strokec5 .\cf12 \strokec12 length\cf4 \strokec4  \cf2 \strokec2 %\cf4 \strokec4  \cf7 \strokec7 4\cf4 \strokec4 ) \cf2 \strokec2 s\cf4 \strokec4  \cf2 \strokec2 +=\cf4 \strokec4  \cf10 \strokec10 "="\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 bin\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf6 \strokec6 atob\cf8 \strokec8 (\cf2 \strokec2 s\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 out\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 new\cf8 \strokec8  \cf6 \strokec6 Uint8Array\cf8 \strokec8 (\cf9 \strokec9 bin\cf5 \strokec5 .\cf12 \strokec12 length\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 for\cf4 \strokec4  (\cf2 \strokec2 let\cf8 \strokec8  \cf2 \strokec2 i\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf7 \strokec7 0\cf5 \strokec5 ;\cf4 \strokec4  \cf2 \strokec2 i\cf4 \strokec4  \cf2 \strokec2 <\cf4 \strokec4  \cf9 \strokec9 bin\cf5 \strokec5 .\cf12 \strokec12 length\cf5 \strokec5 ;\cf4 \strokec4  \cf2 \strokec2 i++\cf4 \strokec4 ) \cf2 \strokec2 out\cf4 \strokec4 [\cf2 \strokec2 i\cf4 \strokec4 ] \cf2 \strokec2 =\cf4 \strokec4  \cf9 \strokec9 bin\cf5 \strokec5 .\cf6 \strokec6 charCodeAt\cf4 \strokec4 (\cf2 \strokec2 i\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 return\cf4 \strokec4  \cf2 \strokec2 out\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 async\cf4 \strokec4  \cf2 \strokec2 function\cf4 \strokec4  \cf6 \strokec6 sha256Hex\cf5 \strokec5 (\cf7 \strokec7 s\cf5 \strokec5 )\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 buf\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 new\cf8 \strokec8  \cf6 \strokec6 TextEncoder\cf8 \strokec8 ()\cf5 \strokec5 .\cf6 \strokec6 encode\cf8 \strokec8 (\cf2 \strokec2 s\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 hash\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 await\cf8 \strokec8  \cf9 \strokec9 crypto\cf5 \strokec5 .\cf9 \strokec9 subtle\cf5 \strokec5 .\cf6 \strokec6 digest\cf8 \strokec8 (\cf10 \strokec10 "SHA-256"\cf5 \strokec5 ,\cf8 \strokec8  \cf2 \strokec2 buf\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 return\cf4 \strokec4  [\cf2 \strokec2 ...new\cf4 \strokec4  \cf6 \strokec6 Uint8Array\cf4 \strokec4 (\cf2 \strokec2 hash\cf4 \strokec4 )]\cf5 \strokec5 .\cf6 \strokec6 map\cf4 \strokec4 (\cf5 \strokec5 (\cf7 \strokec7 b\cf5 \strokec5 )\cf4 \strokec4  \cf2 \strokec2 =>\cf4 \strokec4  \cf9 \strokec9 b\cf5 \strokec5 .\cf6 \strokec6 toString\cf4 \strokec4 (\cf7 \strokec7 16\cf4 \strokec4 )\cf5 \strokec5 .\cf6 \strokec6 padStart\cf4 \strokec4 (\cf7 \strokec7 2\cf5 \strokec5 ,\cf4 \strokec4  \cf10 \strokec10 "0"\cf4 \strokec4 ))\cf5 \strokec5 .\cf6 \strokec6 join\cf4 \strokec4 (\cf10 \strokec10 ""\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 async\cf4 \strokec4  \cf2 \strokec2 function\cf4 \strokec4  \cf6 \strokec6 deriveAesKeyFromToken\cf5 \strokec5 (\cf7 \strokec7 token\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 masterKeyB64\cf5 \strokec5 )\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf2 \strokec2 let\cf8 \strokec8  \cf2 \strokec2 s\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf6 \strokec6 String\cf8 \strokec8 (\cf2 \strokec2 masterKeyB64\cf8 \strokec8  \cf2 \strokec2 ||\cf8 \strokec8  \cf10 \strokec10 ""\cf8 \strokec8 )\cf5 \strokec5 .\cf6 \strokec6 trim\cf8 \strokec8 ()\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 s\cf4 \strokec4  \cf2 \strokec2 =\cf4 \strokec4  \cf9 \strokec9 s\cf5 \strokec5 .\cf6 \strokec6 replace\cf4 \strokec4 (\cf10 \strokec10 /\cf11 \strokec11 -\cf10 \strokec10 /\cf9 \strokec9 g\cf5 \strokec5 ,\cf4 \strokec4  \cf10 \strokec10 "+"\cf4 \strokec4 )\cf5 \strokec5 .\cf6 \strokec6 replace\cf4 \strokec4 (\cf10 \strokec10 /\cf11 \strokec11 _\cf10 \strokec10 /\cf9 \strokec9 g\cf5 \strokec5 ,\cf4 \strokec4  \cf10 \strokec10 "/"\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 while\cf4 \strokec4  (\cf9 \strokec9 s\cf5 \strokec5 .\cf12 \strokec12 length\cf4 \strokec4  \cf2 \strokec2 %\cf4 \strokec4  \cf7 \strokec7 4\cf4 \strokec4 ) \cf2 \strokec2 s\cf4 \strokec4  \cf2 \strokec2 +=\cf4 \strokec4  \cf10 \strokec10 "="\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 masterRaw\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf9 \strokec9 Uint8Array\cf5 \strokec5 .\cf6 \strokec6 from\cf8 \strokec8 (\cf6 \strokec6 atob\cf8 \strokec8 (\cf2 \strokec2 s\cf8 \strokec8 )\cf5 \strokec5 ,\cf8 \strokec8  \cf5 \strokec5 (\cf7 \strokec7 c\cf5 \strokec5 )\cf8 \strokec8  \cf2 \strokec2 =>\cf8 \strokec8  \cf9 \strokec9 c\cf5 \strokec5 .\cf6 \strokec6 charCodeAt\cf8 \strokec8 (\cf7 \strokec7 0\cf8 \strokec8 ))\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 if\cf4 \strokec4  (\cf9 \strokec9 masterRaw\cf5 \strokec5 .\cf12 \strokec12 length\cf4 \strokec4  \cf2 \strokec2 !==\cf4 \strokec4  \cf7 \strokec7 32\cf4 \strokec4 ) \cf2 \strokec2 throw\cf4 \strokec4  \cf2 \strokec2 new\cf4 \strokec4  \cf6 \strokec6 Error\cf4 \strokec4 (\cf10 \strokec10 "ENC_MASTER_KEY_B64 must decode to 32 bytes."\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 hkdfKey\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 await\cf8 \strokec8  \cf9 \strokec9 crypto\cf5 \strokec5 .\cf9 \strokec9 subtle\cf5 \strokec5 .\cf6 \strokec6 importKey\cf8 \strokec8 (\cf10 \strokec10 "raw"\cf5 \strokec5 ,\cf8 \strokec8  \cf2 \strokec2 masterRaw\cf5 \strokec5 ,\cf8 \strokec8  \cf10 \strokec10 "HKDF"\cf5 \strokec5 ,\cf8 \strokec8  false\cf5 \strokec5 ,\cf8 \strokec8  [\cf10 \strokec10 "deriveKey"\cf8 \strokec8 ])\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 salt\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 new\cf8 \strokec8  \cf6 \strokec6 TextEncoder\cf8 \strokec8 ()\cf5 \strokec5 .\cf6 \strokec6 encode\cf8 \strokec8 (\cf10 \strokec10 "ssn-mvp-salt-v1"\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 info\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 new\cf8 \strokec8  \cf6 \strokec6 TextEncoder\cf8 \strokec8 ()\cf5 \strokec5 .\cf6 \strokec6 encode\cf8 \strokec8 (\cf10 \strokec10 "token:"\cf8 \strokec8  \cf2 \strokec2 +\cf8 \strokec8  \cf2 \strokec2 token\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 return\cf4 \strokec4  \cf9 \strokec9 crypto\cf5 \strokec5 .\cf9 \strokec9 subtle\cf5 \strokec5 .\cf6 \strokec6 deriveKey\cf4 \strokec4 (\cb1 \
+\cb3     \cf5 \strokec5 \{\cf4 \strokec4  name\cf5 \strokec5 :\cf4 \strokec4  \cf10 \strokec10 "HKDF"\cf5 \strokec5 ,\cf4 \strokec4  hash\cf5 \strokec5 :\cf4 \strokec4  \cf10 \strokec10 "SHA-256"\cf5 \strokec5 ,\cf4 \strokec4  \cf2 \strokec2 salt\cf5 \strokec5 ,\cf4 \strokec4  \cf2 \strokec2 info\cf4 \strokec4  \cf5 \strokec5 \},\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 hkdfKey\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cb3     \cf5 \strokec5 \{\cf4 \strokec4  name\cf5 \strokec5 :\cf4 \strokec4  \cf10 \strokec10 "AES-GCM"\cf5 \strokec5 ,\cf4 \strokec4  length\cf5 \strokec5 :\cf4 \strokec4  \cf7 \strokec7 256\cf4 \strokec4  \cf5 \strokec5 \},\cf4 \cb1 \strokec4 \
+\cb3     \cf8 \strokec8 false\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cb3     [\cf10 \strokec10 "encrypt"\cf5 \strokec5 ,\cf4 \strokec4  \cf10 \strokec10 "decrypt"\cf4 \strokec4 ]\cb1 \
+\cb3   )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 async\cf4 \strokec4  \cf2 \strokec2 function\cf4 \strokec4  \cf6 \strokec6 aesGcmEncrypt\cf5 \strokec5 (\cf7 \strokec7 plaintextUtf8\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 aesKey\cf5 \strokec5 )\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 iv\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf9 \strokec9 crypto\cf5 \strokec5 .\cf6 \strokec6 getRandomValues\cf8 \strokec8 (\cf2 \strokec2 new\cf8 \strokec8  \cf6 \strokec6 Uint8Array\cf8 \strokec8 (\cf7 \strokec7 12\cf8 \strokec8 ))\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 pt\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 new\cf8 \strokec8  \cf6 \strokec6 TextEncoder\cf8 \strokec8 ()\cf5 \strokec5 .\cf6 \strokec6 encode\cf8 \strokec8 (\cf2 \strokec2 plaintextUtf8\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 ct\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 new\cf8 \strokec8  \cf6 \strokec6 Uint8Array\cf8 \strokec8 (\cf2 \strokec2 await\cf8 \strokec8  \cf9 \strokec9 crypto\cf5 \strokec5 .\cf9 \strokec9 subtle\cf5 \strokec5 .\cf6 \strokec6 encrypt\cf8 \strokec8 (\cf5 \strokec5 \{\cf8 \strokec8  name\cf5 \strokec5 :\cf8 \strokec8  \cf10 \strokec10 "AES-GCM"\cf5 \strokec5 ,\cf8 \strokec8  \cf2 \strokec2 iv\cf8 \strokec8  \cf5 \strokec5 \},\cf8 \strokec8  \cf2 \strokec2 aesKey\cf5 \strokec5 ,\cf8 \strokec8  \cf2 \strokec2 pt\cf8 \strokec8 ))\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 return\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \strokec4  iv_b64u\cf5 \strokec5 :\cf4 \strokec4  \cf6 \strokec6 b64url\cf4 \strokec4 (\cf2 \strokec2 iv\cf4 \strokec4 )\cf5 \strokec5 ,\cf4 \strokec4  ct_b64u\cf5 \strokec5 :\cf4 \strokec4  \cf6 \strokec6 b64url\cf4 \strokec4 (\cf2 \strokec2 ct\cf4 \strokec4 ) \cf5 \strokec5 \};\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 async\cf4 \strokec4  \cf2 \strokec2 function\cf4 \strokec4  \cf6 \strokec6 aesGcmDecrypt\cf5 \strokec5 (\cf7 \strokec7 iv_b64u\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 ct_b64u\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 aesKey\cf5 \strokec5 )\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 iv\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf6 \strokec6 unb64url\cf8 \strokec8 (\cf2 \strokec2 iv_b64u\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 ct\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf6 \strokec6 unb64url\cf8 \strokec8 (\cf2 \strokec2 ct_b64u\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 pt\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 new\cf8 \strokec8  \cf6 \strokec6 Uint8Array\cf8 \strokec8 (\cf2 \strokec2 await\cf8 \strokec8  \cf9 \strokec9 crypto\cf5 \strokec5 .\cf9 \strokec9 subtle\cf5 \strokec5 .\cf6 \strokec6 decrypt\cf8 \strokec8 (\cf5 \strokec5 \{\cf8 \strokec8  name\cf5 \strokec5 :\cf8 \strokec8  \cf10 \strokec10 "AES-GCM"\cf5 \strokec5 ,\cf8 \strokec8  \cf2 \strokec2 iv\cf8 \strokec8  \cf5 \strokec5 \},\cf8 \strokec8  \cf2 \strokec2 aesKey\cf5 \strokec5 ,\cf8 \strokec8  \cf2 \strokec2 ct\cf8 \strokec8 ))\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 return\cf4 \strokec4  \cf2 \strokec2 new\cf4 \strokec4  \cf6 \strokec6 TextDecoder\cf4 \strokec4 ()\cf5 \strokec5 .\cf6 \strokec6 decode\cf4 \strokec4 (\cf2 \strokec2 pt\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 function\cf4 \strokec4  \cf6 \strokec6 normalizeSSN\cf5 \strokec5 (\cf7 \strokec7 s\cf5 \strokec5 )\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf2 \strokec2 return\cf4 \strokec4  \cf6 \strokec6 String\cf4 \strokec4 (\cf2 \strokec2 s\cf4 \strokec4  \cf2 \strokec2 ||\cf4 \strokec4  \cf10 \strokec10 ""\cf4 \strokec4 )\cf5 \strokec5 .\cf6 \strokec6 replace\cf4 \strokec4 (\cf10 \strokec10 /\cf5 \strokec5 [\cf2 \strokec2 ^\cf11 \strokec11 \\d\cf5 \strokec5 ]\cf10 \strokec10 /\cf9 \strokec9 g\cf5 \strokec5 ,\cf4 \strokec4  \cf10 \strokec10 ""\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 function\cf4 \strokec4  \cf6 \strokec6 nowMs\cf5 \strokec5 ()\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf2 \strokec2 return\cf4 \strokec4  \cf9 \strokec9 Date\cf5 \strokec5 .\cf6 \strokec6 now\cf4 \strokec4 ()\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 function\cf4 \strokec4  \cf6 \strokec6 msDays\cf5 \strokec5 (\cf7 \strokec7 days\cf5 \strokec5 )\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf2 \strokec2 return\cf4 \strokec4  \cf2 \strokec2 days\cf4 \strokec4  \cf2 \strokec2 *\cf4 \strokec4  \cf7 \strokec7 24\cf4 \strokec4  \cf2 \strokec2 *\cf4 \strokec4  \cf7 \strokec7 60\cf4 \strokec4  \cf2 \strokec2 *\cf4 \strokec4  \cf7 \strokec7 60\cf4 \strokec4  \cf2 \strokec2 *\cf4 \strokec4  \cf7 \strokec7 1000\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 async\cf4 \strokec4  \cf2 \strokec2 function\cf4 \strokec4  \cf6 \strokec6 handleCreate\cf5 \strokec5 (\cf7 \strokec7 request\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 env\cf5 \strokec5 )\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf2 \strokec2 try\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 let\cf8 \strokec8  \cf2 \strokec2 body\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 try\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3       \cf2 \strokec2 body\cf4 \strokec4  \cf2 \strokec2 =\cf4 \strokec4  \cf2 \strokec2 await\cf4 \strokec4  \cf9 \strokec9 request\cf5 \strokec5 .\cf6 \strokec6 json\cf4 \strokec4 ()\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf5 \strokec5 \}\cf4 \strokec4  \cf2 \strokec2 catch\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3       \cf2 \strokec2 return\cf4 \strokec4  \cf6 \strokec6 json\cf4 \strokec4 (\cf5 \strokec5 \{\cf4 \strokec4  error\cf5 \strokec5 :\cf4 \strokec4  \cf10 \strokec10 "Invalid JSON."\cf4 \strokec4  \cf5 \strokec5 \},\cf4 \strokec4  \cf7 \strokec7 400\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\cb3     \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 doctorName\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf6 \strokec6 String\cf8 \strokec8 (\cf9 \strokec9 body\cf5 \strokec5 .\cf9 \strokec9 doctorName\cf8 \strokec8  \cf2 \strokec2 ||\cf8 \strokec8  \cf10 \strokec10 ""\cf8 \strokec8 )\cf5 \strokec5 .\cf6 \strokec6 trim\cf8 \strokec8 ()\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 recipientEmail\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf6 \strokec6 String\cf8 \strokec8 (\cf9 \strokec9 body\cf5 \strokec5 .\cf9 \strokec9 recipientEmail\cf8 \strokec8  \cf2 \strokec2 ||\cf8 \strokec8  \cf10 \strokec10 ""\cf8 \strokec8 )\cf5 \strokec5 .\cf6 \strokec6 trim\cf8 \strokec8 ()\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 ssn\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf6 \strokec6 normalizeSSN\cf8 \strokec8 (\cf9 \strokec9 body\cf5 \strokec5 .\cf9 \strokec9 ssn\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\cb3     \cf2 \strokec2 if\cf4 \strokec4  (\cf2 \strokec2 !doctorName\cf4 \strokec4 ) \cf2 \strokec2 return\cf4 \strokec4  \cf6 \strokec6 json\cf4 \strokec4 (\cf5 \strokec5 \{\cf4 \strokec4  error\cf5 \strokec5 :\cf4 \strokec4  \cf10 \strokec10 "Doctor name required."\cf4 \strokec4  \cf5 \strokec5 \},\cf4 \strokec4  \cf7 \strokec7 400\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 if\cf4 \strokec4  (\cf2 \strokec2 !recipientEmail\cf4 \strokec4 ) \cf2 \strokec2 return\cf4 \strokec4  \cf6 \strokec6 json\cf4 \strokec4 (\cf5 \strokec5 \{\cf4 \strokec4  error\cf5 \strokec5 :\cf4 \strokec4  \cf10 \strokec10 "Recipient email required."\cf4 \strokec4  \cf5 \strokec5 \},\cf4 \strokec4  \cf7 \strokec7 400\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 if\cf4 \strokec4  (\cf9 \strokec9 ssn\cf5 \strokec5 .\cf12 \strokec12 length\cf4 \strokec4  \cf2 \strokec2 !==\cf4 \strokec4  \cf7 \strokec7 9\cf4 \strokec4 ) \cf2 \strokec2 return\cf4 \strokec4  \cf6 \strokec6 json\cf4 \strokec4 (\cf5 \strokec5 \{\cf4 \strokec4  error\cf5 \strokec5 :\cf4 \strokec4  \cf10 \strokec10 "SSN must be 9 digits."\cf4 \strokec4  \cf5 \strokec5 \},\cf4 \strokec4  \cf7 \strokec7 400\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\cb3     \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 tokenBytes\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf9 \strokec9 crypto\cf5 \strokec5 .\cf6 \strokec6 getRandomValues\cf8 \strokec8 (\cf2 \strokec2 new\cf8 \strokec8  \cf6 \strokec6 Uint8Array\cf8 \strokec8 (\cf7 \strokec7 32\cf8 \strokec8 ))\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 token\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf6 \strokec6 b64url\cf8 \strokec8 (\cf2 \strokec2 tokenBytes\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\cb3     \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 tokenHash\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 await\cf8 \strokec8  \cf6 \strokec6 sha256Hex\cf8 \strokec8 (\cf2 \strokec2 token\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 objectKey\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf10 \strokec10 `ssn/\cf5 \strokec5 $\{\cf2 \strokec2 tokenHash\cf5 \strokec5 \}\cf10 \strokec10 .json`\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\cb3     \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 aesKey\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 await\cf8 \strokec8  \cf6 \strokec6 deriveAesKeyFromToken\cf8 \strokec8 (\cf2 \strokec2 token\cf5 \strokec5 ,\cf8 \strokec8  \cf9 \strokec9 env\cf5 \strokec5 .\cf9 \strokec9 ENC_MASTER_KEY_B64\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 enc\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 await\cf8 \strokec8  \cf6 \strokec6 aesGcmEncrypt\cf8 \strokec8 (\cf2 \strokec2 ssn\cf5 \strokec5 ,\cf8 \strokec8  \cf2 \strokec2 aesKey\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\cb3     \cf2 \strokec2 await\cf4 \strokec4  \cf9 \strokec9 env\cf5 \strokec5 .\cf9 \strokec9 SSN_BUCKET\cf5 \strokec5 .\cf6 \strokec6 put\cf4 \strokec4 (\cb1 \
+\cb3       \cf2 \strokec2 objectKey\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cb3       \cf9 \strokec9 JSON\cf5 \strokec5 .\cf6 \strokec6 stringify\cf4 \strokec4 (\cf5 \strokec5 \{\cf4 \strokec4  iv_b64u\cf5 \strokec5 :\cf4 \strokec4  \cf9 \strokec9 enc\cf5 \strokec5 .\cf9 \strokec9 iv_b64u\cf5 \strokec5 ,\cf4 \strokec4  ct_b64u\cf5 \strokec5 :\cf4 \strokec4  \cf9 \strokec9 enc\cf5 \strokec5 .\cf9 \strokec9 ct_b64u\cf4 \strokec4  \cf5 \strokec5 \}\cf4 \strokec4 )\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cb3       \cf5 \strokec5 \{\cf4 \strokec4  httpMetadata\cf5 \strokec5 :\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \strokec4  contentType\cf5 \strokec5 :\cf4 \strokec4  \cf10 \strokec10 "application/json"\cf4 \strokec4  \cf5 \strokec5 \}\cf4 \strokec4  \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
+\cb3     )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\cb3     \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 record\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf8 \cb3 \strokec8   \cf2 \strokec2 objectKey\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cf8 \cb3 \strokec8   \cf2 \strokec2 doctorName\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cf8 \cb3 \strokec8   createdAt\cf5 \strokec5 :\cf8 \strokec8  \cf6 \strokec6 nowMs\cf8 \strokec8 ()\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cf8 \cb3 \strokec8   expiresAt\cf5 \strokec5 :\cf8 \strokec8  \cf6 \strokec6 nowMs\cf8 \strokec8 () \cf2 \strokec2 +\cf8 \strokec8  \cf6 \strokec6 msDays\cf8 \strokec8 (\cf7 \strokec7 30\cf8 \strokec8 )\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cf8 \cb3 \strokec8   viewsRemaining\cf5 \strokec5 :\cf8 \strokec8  \cf7 \strokec7 2\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 \};\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3     \cf2 \strokec2 await\cf4 \strokec4  \cf9 \strokec9 env\cf5 \strokec5 .\cf9 \strokec9 TOKENS_KV\cf5 \strokec5 .\cf6 \strokec6 put\cf4 \strokec4 (\cf2 \strokec2 tokenHash\cf5 \strokec5 ,\cf4 \strokec4  \cf9 \strokec9 JSON\cf5 \strokec5 .\cf6 \strokec6 stringify\cf4 \strokec4 (\cf2 \strokec2 record\cf4 \strokec4 ))\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 viewUrl\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf10 \strokec10 `\cf5 \strokec5 $\{\cf9 \strokec9 env\cf5 \strokec5 .\cf9 \strokec9 VIEW_BASE_URL\cf5 \strokec5 \}\cf10 \strokec10 /v/\cf5 \strokec5 $\{\cf6 \strokec6 encodeURIComponent\cf10 \strokec10 (\cf2 \strokec2 token\cf10 \strokec10 )\cf5 \strokec5 \}\cf10 \strokec10 `\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cf2 \cb3 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 redactedDoctorName\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 doctorName\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf5 \strokec5 .\cf6 \strokec6 split\cf4 \strokec4 (\cf10 \strokec10 /\cf11 \strokec11 \\s\cf2 \strokec2 +\cf10 \strokec10 /\cf4 \strokec4 )\cb1 \
+\cb3   \cf5 \strokec5 .\cf6 \strokec6 filter\cf4 \strokec4 (\cf2 \strokec2 Boolean\cf4 \strokec4 )\cb1 \
+\cb3   \cf5 \strokec5 .\cf6 \strokec6 map\cf4 \strokec4 (\cf5 \strokec5 (\cf7 \strokec7 part\cf5 \strokec5 )\cf4 \strokec4  \cf2 \strokec2 =>\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 if\cf4 \strokec4  (\cf9 \strokec9 part\cf5 \strokec5 .\cf12 \strokec12 length\cf4 \strokec4  \cf2 \strokec2 <=\cf4 \strokec4  \cf7 \strokec7 2\cf4 \strokec4 ) \cf2 \strokec2 return\cf4 \strokec4  \cf2 \strokec2 part\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 return\cf4 \strokec4  \cf2 \strokec2 part\cf4 \strokec4 [\cf7 \strokec7 0\cf4 \strokec4 ] \cf2 \strokec2 +\cf4 \strokec4  \cf10 \strokec10 "_"\cf5 \strokec5 .\cf6 \strokec6 repeat\cf4 \strokec4 (\cf9 \strokec9 part\cf5 \strokec5 .\cf12 \strokec12 length\cf4 \strokec4  \cf2 \strokec2 -\cf4 \strokec4  \cf7 \strokec7 2\cf4 \strokec4 ) \cf2 \strokec2 +\cf4 \strokec4  \cf2 \strokec2 part\cf4 \strokec4 [\cf9 \strokec9 part\cf5 \strokec5 .\cf12 \strokec12 length\cf4 \strokec4  \cf2 \strokec2 -\cf4 \strokec4  \cf7 \strokec7 1\cf4 \strokec4 ]\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf5 \strokec5 \}\cf4 \strokec4 )\cb1 \
+\cb3   \cf5 \strokec5 .\cf6 \strokec6 join\cf4 \strokec4 (\cf10 \strokec10 " "\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\cb3     \cf2 \strokec2 await\cf4 \strokec4  \cf6 \strokec6 sesSendEmail\cf4 \strokec4 (\cf2 \strokec2 env\cf5 \strokec5 ,\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3       to\cf5 \strokec5 :\cf4 \strokec4  \cf2 \strokec2 recipientEmail\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cb3       subject\cf5 \strokec5 :\cf4 \strokec4  \cf10 \strokec10 `Secure message from Priviscribe.ai`\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cb3       bodyText\cf5 \strokec5 :\cf4 \cb1 \strokec4 \
+\cb3                 \cf10 \strokec10 `\cf5 \strokec5 $\{\cf2 \strokec2 redactedDoctorName\cf5 \strokec5 \}\cf10 \strokec10 's SSN will be displayed over the next 60 seconds after you click:\cf11 \strokec11 \\n\\n\cf10 \strokec10 `\cf4 \strokec4  \cf2 \strokec2 +\cf4 \cb1 \strokec4 \
+\cb3         \cf10 \strokec10 `\cf5 \strokec5 $\{\cf2 \strokec2 viewUrl\cf5 \strokec5 \}\cf11 \strokec11 \\n\\n\cf10 \strokec10 `\cf4 \strokec4  \cf2 \strokec2 +\cf4 \cb1 \strokec4 \
+\cb3         \cf10 \strokec10 `This link expires in 30 days and allows up to 2 total views.`\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cb3     \cf5 \strokec5 \}\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\cb3     \cf2 \strokec2 return\cf4 \strokec4  \cf6 \strokec6 json\cf4 \strokec4 (\cf5 \strokec5 \{\cf4 \strokec4  ok\cf5 \strokec5 :\cf4 \strokec4  \cf8 \strokec8 true\cf5 \strokec5 ,\cf4 \strokec4  \cf2 \strokec2 viewUrl\cf4 \strokec4  \cf5 \strokec5 \}\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf5 \strokec5 \}\cf4 \strokec4  \cf2 \strokec2 catch\cf4 \strokec4  (\cf2 \strokec2 e\cf4 \strokec4 ) \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 msg\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 e\cf8 \strokec8  \cf2 \strokec2 instanceof\cf8 \strokec8  \cf6 \strokec6 Error\cf8 \strokec8  \cf2 \strokec2 ?\cf8 \strokec8  (\cf9 \strokec9 e\cf5 \strokec5 .\cf9 \strokec9 stack\cf8 \strokec8  \cf2 \strokec2 ||\cf8 \strokec8  \cf9 \strokec9 e\cf5 \strokec5 .\cf9 \strokec9 message\cf8 \strokec8 ) \cf2 \strokec2 :\cf8 \strokec8  \cf6 \strokec6 String\cf8 \strokec8 (\cf2 \strokec2 e\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf9 \strokec9 console\cf5 \strokec5 .\cf6 \strokec6 error\cf4 \strokec4 (\cf10 \strokec10 "CREATE_ERROR"\cf5 \strokec5 ,\cf4 \strokec4  \cf2 \strokec2 msg\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 return\cf4 \strokec4  \cf6 \strokec6 json\cf4 \strokec4 (\cf5 \strokec5 \{\cf4 \strokec4  error\cf5 \strokec5 :\cf4 \strokec4  \cf10 \strokec10 "Internal error"\cf5 \strokec5 ,\cf4 \strokec4  detail\cf5 \strokec5 :\cf4 \strokec4  \cf2 \strokec2 msg\cf4 \strokec4  \cf5 \strokec5 \},\cf4 \strokec4  \cf7 \strokec7 500\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 async\cf4 \strokec4  \cf2 \strokec2 function\cf4 \strokec4  \cf6 \strokec6 handleClaim\cf5 \strokec5 (\cf7 \strokec7 token\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 env\cf5 \strokec5 )\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf2 \strokec2 try\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 if\cf4 \strokec4  (\cf2 \strokec2 !token\cf4 \strokec4 ) \cf2 \strokec2 return\cf4 \strokec4  \cf6 \strokec6 json\cf4 \strokec4 (\cf5 \strokec5 \{\cf4 \strokec4  error\cf5 \strokec5 :\cf4 \strokec4  \cf10 \strokec10 "Missing token."\cf4 \strokec4  \cf5 \strokec5 \},\cf4 \strokec4  \cf7 \strokec7 400\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\cb3     \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 tokenHash\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 await\cf8 \strokec8  \cf6 \strokec6 sha256Hex\cf8 \strokec8 (\cf2 \strokec2 token\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 raw\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 await\cf8 \strokec8  \cf9 \strokec9 env\cf5 \strokec5 .\cf9 \strokec9 TOKENS_KV\cf5 \strokec5 .\cf6 \strokec6 get\cf8 \strokec8 (\cf2 \strokec2 tokenHash\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 if\cf4 \strokec4  (\cf2 \strokec2 !raw\cf4 \strokec4 ) \cf2 \strokec2 return\cf4 \strokec4  \cf6 \strokec6 json\cf4 \strokec4 (\cf5 \strokec5 \{\cf4 \strokec4  error\cf5 \strokec5 :\cf4 \strokec4  \cf10 \strokec10 "Invalid / expired link. Please contact the sender for another try."\cf4 \strokec4  \cf5 \strokec5 \},\cf4 \strokec4  \cf7 \strokec7 404\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\cb3     \cf2 \strokec2 let\cf8 \strokec8  \cf2 \strokec2 record\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 try\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3       \cf2 \strokec2 record\cf4 \strokec4  \cf2 \strokec2 =\cf4 \strokec4  \cf9 \strokec9 JSON\cf5 \strokec5 .\cf6 \strokec6 parse\cf4 \strokec4 (\cf2 \strokec2 raw\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf5 \strokec5 \}\cf4 \strokec4  \cf2 \strokec2 catch\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3       \cf2 \strokec2 return\cf4 \strokec4  \cf6 \strokec6 json\cf4 \strokec4 (\cf5 \strokec5 \{\cf4 \strokec4  error\cf5 \strokec5 :\cf4 \strokec4  \cf10 \strokec10 "Invalid token record."\cf4 \strokec4  \cf5 \strokec5 \},\cf4 \strokec4  \cf7 \strokec7 500\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\cb3     \cf2 \strokec2 if\cf4 \strokec4  (\cf6 \strokec6 nowMs\cf4 \strokec4 () \cf2 \strokec2 >\cf4 \strokec4  \cf9 \strokec9 record\cf5 \strokec5 .\cf9 \strokec9 expiresAt\cf4 \strokec4 ) \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3       \cf2 \strokec2 await\cf4 \strokec4  \cf6 \strokec6 safeDelete\cf4 \strokec4 (\cf2 \strokec2 env\cf5 \strokec5 ,\cf4 \strokec4  \cf9 \strokec9 record\cf5 \strokec5 .\cf9 \strokec9 objectKey\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3       \cf2 \strokec2 await\cf4 \strokec4  \cf9 \strokec9 env\cf5 \strokec5 .\cf9 \strokec9 TOKENS_KV\cf5 \strokec5 .\cf6 \strokec6 delete\cf4 \strokec4 (\cf2 \strokec2 tokenHash\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3       \cf2 \strokec2 return\cf4 \strokec4  \cf6 \strokec6 json\cf4 \strokec4 (\cf5 \strokec5 \{\cf4 \strokec4  error\cf5 \strokec5 :\cf4 \strokec4  \cf10 \strokec10 "Expired."\cf4 \strokec4  \cf5 \strokec5 \},\cf4 \strokec4  \cf7 \strokec7 410\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\cb3     \cf2 \strokec2 if\cf4 \strokec4  (\cf9 \strokec9 record\cf5 \strokec5 .\cf9 \strokec9 viewsRemaining\cf4 \strokec4  \cf2 \strokec2 <=\cf4 \strokec4  \cf7 \strokec7 0\cf4 \strokec4 ) \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3       \cf2 \strokec2 await\cf4 \strokec4  \cf6 \strokec6 safeDelete\cf4 \strokec4 (\cf2 \strokec2 env\cf5 \strokec5 ,\cf4 \strokec4  \cf9 \strokec9 record\cf5 \strokec5 .\cf9 \strokec9 objectKey\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3       \cf2 \strokec2 await\cf4 \strokec4  \cf9 \strokec9 env\cf5 \strokec5 .\cf9 \strokec9 TOKENS_KV\cf5 \strokec5 .\cf6 \strokec6 delete\cf4 \strokec4 (\cf2 \strokec2 tokenHash\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3       \cf2 \strokec2 return\cf4 \strokec4  \cf6 \strokec6 json\cf4 \strokec4 (\cf5 \strokec5 \{\cf4 \strokec4  error\cf5 \strokec5 :\cf4 \strokec4  \cf10 \strokec10 "Maximum views reached. Please contact the sender for another chance."\cf4 \strokec4  \cf5 \strokec5 \},\cf4 \strokec4  \cf7 \strokec7 410\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\cb3     \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 obj\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 await\cf8 \strokec8  \cf9 \strokec9 env\cf5 \strokec5 .\cf9 \strokec9 SSN_BUCKET\cf5 \strokec5 .\cf6 \strokec6 get\cf8 \strokec8 (\cf9 \strokec9 record\cf5 \strokec5 .\cf9 \strokec9 objectKey\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 if\cf4 \strokec4  (\cf2 \strokec2 !obj\cf4 \strokec4 ) \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3       \cf2 \strokec2 await\cf4 \strokec4  \cf9 \strokec9 env\cf5 \strokec5 .\cf9 \strokec9 TOKENS_KV\cf5 \strokec5 .\cf6 \strokec6 delete\cf4 \strokec4 (\cf2 \strokec2 tokenHash\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3       \cf2 \strokec2 return\cf4 \strokec4  \cf6 \strokec6 json\cf4 \strokec4 (\cf5 \strokec5 \{\cf4 \strokec4  error\cf5 \strokec5 :\cf4 \strokec4  \cf10 \strokec10 "Not available."\cf4 \strokec4  \cf5 \strokec5 \},\cf4 \strokec4  \cf7 \strokec7 410\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\cb3     \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 payload\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 await\cf8 \strokec8  \cf9 \strokec9 obj\cf5 \strokec5 .\cf6 \strokec6 json\cf8 \strokec8 ()\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 aesKey\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 await\cf8 \strokec8  \cf6 \strokec6 deriveAesKeyFromToken\cf8 \strokec8 (\cf2 \strokec2 token\cf5 \strokec5 ,\cf8 \strokec8  \cf9 \strokec9 env\cf5 \strokec5 .\cf9 \strokec9 ENC_MASTER_KEY_B64\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 ssn\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 await\cf8 \strokec8  \cf6 \strokec6 aesGcmDecrypt\cf8 \strokec8 (\cf9 \strokec9 payload\cf5 \strokec5 .\cf9 \strokec9 iv_b64u\cf5 \strokec5 ,\cf8 \strokec8  \cf9 \strokec9 payload\cf5 \strokec5 .\cf9 \strokec9 ct_b64u\cf5 \strokec5 ,\cf8 \strokec8  \cf2 \strokec2 aesKey\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\cb3     \cf9 \strokec9 record\cf5 \strokec5 .\cf9 \strokec9 viewsRemaining\cf4 \strokec4  \cf2 \strokec2 =\cf4 \strokec4  \cf9 \strokec9 Math\cf5 \strokec5 .\cf6 \strokec6 max\cf4 \strokec4 (\cf7 \strokec7 0\cf5 \strokec5 ,\cf4 \strokec4  (\cf9 \strokec9 record\cf5 \strokec5 .\cf9 \strokec9 viewsRemaining\cf4 \strokec4  \cf2 \strokec2 |\cf4 \strokec4  \cf7 \strokec7 0\cf4 \strokec4 ) \cf2 \strokec2 -\cf4 \strokec4  \cf7 \strokec7 1\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 await\cf4 \strokec4  \cf9 \strokec9 env\cf5 \strokec5 .\cf9 \strokec9 TOKENS_KV\cf5 \strokec5 .\cf6 \strokec6 put\cf4 \strokec4 (\cf2 \strokec2 tokenHash\cf5 \strokec5 ,\cf4 \strokec4  \cf9 \strokec9 JSON\cf5 \strokec5 .\cf6 \strokec6 stringify\cf4 \strokec4 (\cf2 \strokec2 record\cf4 \strokec4 ))\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\cb3     \cf2 \strokec2 if\cf4 \strokec4  (\cf9 \strokec9 record\cf5 \strokec5 .\cf9 \strokec9 viewsRemaining\cf4 \strokec4  \cf2 \strokec2 <=\cf4 \strokec4  \cf7 \strokec7 0\cf4 \strokec4 ) \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3       \cf2 \strokec2 await\cf4 \strokec4  \cf6 \strokec6 safeDelete\cf4 \strokec4 (\cf2 \strokec2 env\cf5 \strokec5 ,\cf4 \strokec4  \cf9 \strokec9 record\cf5 \strokec5 .\cf9 \strokec9 objectKey\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3       \cf2 \strokec2 await\cf4 \strokec4  \cf9 \strokec9 env\cf5 \strokec5 .\cf9 \strokec9 TOKENS_KV\cf5 \strokec5 .\cf6 \strokec6 delete\cf4 \strokec4 (\cf2 \strokec2 tokenHash\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\cb3     \cf2 \strokec2 return\cf4 \strokec4  \cf6 \strokec6 json\cf4 \strokec4 (\cf5 \strokec5 \{\cf4 \strokec4  ok\cf5 \strokec5 :\cf4 \strokec4  \cf8 \strokec8 true\cf5 \strokec5 ,\cf4 \strokec4  \cf2 \strokec2 ssn\cf5 \strokec5 ,\cf4 \strokec4  doctorName\cf5 \strokec5 :\cf4 \strokec4  \cf9 \strokec9 record\cf5 \strokec5 .\cf9 \strokec9 doctorName\cf5 \strokec5 ,\cf4 \strokec4  viewsRemaining\cf5 \strokec5 :\cf4 \strokec4  \cf9 \strokec9 record\cf5 \strokec5 .\cf9 \strokec9 viewsRemaining\cf5 \strokec5 ,\cf4 \strokec4  expiresAt\cf5 \strokec5 :\cf4 \strokec4  \cf9 \strokec9 record\cf5 \strokec5 .\cf9 \strokec9 expiresAt\cf4 \strokec4  \cf5 \strokec5 \}\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf5 \strokec5 \}\cf4 \strokec4  \cf2 \strokec2 catch\cf4 \strokec4  (\cf2 \strokec2 e\cf4 \strokec4 ) \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 msg\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 e\cf8 \strokec8  \cf2 \strokec2 instanceof\cf8 \strokec8  \cf6 \strokec6 Error\cf8 \strokec8  \cf2 \strokec2 ?\cf8 \strokec8  (\cf9 \strokec9 e\cf5 \strokec5 .\cf9 \strokec9 stack\cf8 \strokec8  \cf2 \strokec2 ||\cf8 \strokec8  \cf9 \strokec9 e\cf5 \strokec5 .\cf9 \strokec9 message\cf8 \strokec8 ) \cf2 \strokec2 :\cf8 \strokec8  \cf6 \strokec6 String\cf8 \strokec8 (\cf2 \strokec2 e\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf9 \strokec9 console\cf5 \strokec5 .\cf6 \strokec6 error\cf4 \strokec4 (\cf10 \strokec10 "CLAIM_ERROR"\cf5 \strokec5 ,\cf4 \strokec4  \cf2 \strokec2 msg\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 return\cf4 \strokec4  \cf6 \strokec6 json\cf4 \strokec4 (\cf5 \strokec5 \{\cf4 \strokec4  error\cf5 \strokec5 :\cf4 \strokec4  \cf10 \strokec10 "Internal error"\cf5 \strokec5 ,\cf4 \strokec4  detail\cf5 \strokec5 :\cf4 \strokec4  \cf2 \strokec2 msg\cf4 \strokec4  \cf5 \strokec5 \},\cf4 \strokec4  \cf7 \strokec7 500\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 async\cf4 \strokec4  \cf2 \strokec2 function\cf4 \strokec4  \cf6 \strokec6 safeDelete\cf5 \strokec5 (\cf7 \strokec7 env\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 objectKey\cf5 \strokec5 )\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf2 \strokec2 try\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 await\cf4 \strokec4  \cf9 \strokec9 env\cf5 \strokec5 .\cf9 \strokec9 SSN_BUCKET\cf5 \strokec5 .\cf6 \strokec6 delete\cf4 \strokec4 (\cf2 \strokec2 objectKey\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf5 \strokec5 \}\cf4 \strokec4  \cf2 \strokec2 catch\cf4 \strokec4  \cf5 \strokec5 \{\}\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\i \cf4 \cb3 /* -------- Amazon SES (Signature Version 4) -------- */
+\f0\i0 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 async\cf4 \strokec4  \cf2 \strokec2 function\cf4 \strokec4  \cf6 \strokec6 sesSendEmail\cf5 \strokec5 (\cf7 \strokec7 env\cf5 \strokec5 ,\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \strokec4  \cf7 \strokec7 to\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 subject\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 bodyText\cf4 \strokec4  \cf5 \strokec5 \})\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 region\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf9 \strokec9 env\cf5 \strokec5 .\cf9 \strokec9 AWS_REGION\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 service\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf10 \strokec10 "ses"\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 host\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf10 \strokec10 `email.\cf5 \strokec5 $\{\cf2 \strokec2 region\cf5 \strokec5 \}\cf10 \strokec10 .amazonaws.com`\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 endpoint\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf10 \strokec10 `https://\cf5 \strokec5 $\{\cf2 \strokec2 host\cf5 \strokec5 \}\cf10 \strokec10 /v2/email/outbound-emails`\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 payload\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf8 \cb3 \strokec8     FromEmailAddress\cf5 \strokec5 :\cf8 \strokec8  \cf9 \strokec9 env\cf5 \strokec5 .\cf9 \strokec9 SES_FROM\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cf8 \cb3 \strokec8     Destination\cf5 \strokec5 :\cf8 \strokec8  \cf5 \strokec5 \{\cf8 \strokec8  ToAddresses\cf5 \strokec5 :\cf8 \strokec8  [\cf2 \strokec2 to\cf8 \strokec8 ] \cf5 \strokec5 \},\cf4 \cb1 \strokec4 \
+\cf8 \cb3 \strokec8     Content\cf5 \strokec5 :\cf8 \strokec8  \cf5 \strokec5 \{\cf8 \strokec8  Simple\cf5 \strokec5 :\cf8 \strokec8  \cf5 \strokec5 \{\cf8 \strokec8  Subject\cf5 \strokec5 :\cf8 \strokec8  \cf5 \strokec5 \{\cf8 \strokec8  Data\cf5 \strokec5 :\cf8 \strokec8  \cf2 \strokec2 subject\cf8 \strokec8  \cf5 \strokec5 \},\cf8 \strokec8  Body\cf5 \strokec5 :\cf8 \strokec8  \cf5 \strokec5 \{\cf8 \strokec8  Text\cf5 \strokec5 :\cf8 \strokec8  \cf5 \strokec5 \{\cf8 \strokec8  Data\cf5 \strokec5 :\cf8 \strokec8  \cf2 \strokec2 bodyText\cf8 \strokec8  \cf5 \strokec5 \}\cf8 \strokec8  \cf5 \strokec5 \}\cf8 \strokec8  \cf5 \strokec5 \}\cf8 \strokec8  \cf5 \strokec5 \},\cf4 \cb1 \strokec4 \
+\cf8 \cb3 \strokec8   \cf5 \strokec5 \};\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 body\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf9 \strokec9 JSON\cf5 \strokec5 .\cf6 \strokec6 stringify\cf8 \strokec8 (\cf2 \strokec2 payload\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 amzDate\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf6 \strokec6 toAmzDate\cf8 \strokec8 (\cf2 \strokec2 new\cf8 \strokec8  \cf6 \strokec6 Date\cf8 \strokec8 ())\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 dateStamp\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf9 \strokec9 amzDate\cf5 \strokec5 .\cf6 \strokec6 slice\cf8 \strokec8 (\cf7 \strokec7 0\cf5 \strokec5 ,\cf8 \strokec8  \cf7 \strokec7 8\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 signed\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 await\cf8 \strokec8  \cf6 \strokec6 awsSigV4Sign\cf8 \strokec8 (\cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf8 \cb3 \strokec8     method\cf5 \strokec5 :\cf8 \strokec8  \cf10 \strokec10 "POST"\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cf8 \cb3 \strokec8     url\cf5 \strokec5 :\cf8 \strokec8  \cf2 \strokec2 endpoint\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cf8 \cb3 \strokec8     \cf2 \strokec2 host\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cf8 \cb3 \strokec8     \cf2 \strokec2 region\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cf8 \cb3 \strokec8     \cf2 \strokec2 service\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cf8 \cb3 \strokec8     \cf2 \strokec2 amzDate\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cf8 \cb3 \strokec8     \cf2 \strokec2 dateStamp\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cf8 \cb3 \strokec8     accessKeyId\cf5 \strokec5 :\cf8 \strokec8  \cf9 \strokec9 env\cf5 \strokec5 .\cf9 \strokec9 AWS_ACCESS_KEY_ID\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cf8 \cb3 \strokec8     secretAccessKey\cf5 \strokec5 :\cf8 \strokec8  \cf9 \strokec9 env\cf5 \strokec5 .\cf9 \strokec9 AWS_SECRET_ACCESS_KEY\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cf8 \cb3 \strokec8     payload\cf5 \strokec5 :\cf8 \strokec8  \cf2 \strokec2 body\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cf8 \cb3 \strokec8     headers\cf5 \strokec5 :\cf8 \strokec8  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cf8 \cb3 \strokec8       \cf10 \strokec10 "content-type"\cf5 \strokec5 :\cf8 \strokec8  \cf10 \strokec10 "application/json"\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cf8 \cb3 \strokec8       \cf10 \strokec10 "x-amz-date"\cf5 \strokec5 :\cf8 \strokec8  \cf2 \strokec2 amzDate\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cf8 \cb3 \strokec8     \cf5 \strokec5 \},\cf4 \cb1 \strokec4 \
+\cf8 \cb3 \strokec8   \cf5 \strokec5 \}\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 res\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 await\cf8 \strokec8  \cf6 \strokec6 fetch\cf8 \strokec8 (\cf2 \strokec2 endpoint\cf5 \strokec5 ,\cf8 \strokec8  \cf5 \strokec5 \{\cf8 \strokec8  method\cf5 \strokec5 :\cf8 \strokec8  \cf10 \strokec10 "POST"\cf5 \strokec5 ,\cf8 \strokec8  headers\cf5 \strokec5 :\cf8 \strokec8  \cf9 \strokec9 signed\cf5 \strokec5 .\cf9 \strokec9 headers\cf5 \strokec5 ,\cf8 \strokec8  \cf2 \strokec2 body\cf8 \strokec8  \cf5 \strokec5 \}\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\cb3   \cf2 \strokec2 if\cf4 \strokec4  (\cf2 \strokec2 !\cf9 \strokec9 res\cf5 \strokec5 .\cf9 \strokec9 ok\cf4 \strokec4 ) \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 t\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 await\cf8 \strokec8  \cf9 \strokec9 res\cf5 \strokec5 .\cf6 \strokec6 text\cf8 \strokec8 ()\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3     \cf2 \strokec2 throw\cf4 \strokec4  \cf2 \strokec2 new\cf4 \strokec4  \cf6 \strokec6 Error\cf4 \strokec4 (\cf10 \strokec10 `SES send failed: \cf5 \strokec5 $\{\cf9 \strokec9 res\cf5 \strokec5 .\cf9 \strokec9 status\cf5 \strokec5 \}\cf10 \strokec10  \cf5 \strokec5 $\{\cf2 \strokec2 t\cf5 \strokec5 \}\cf10 \strokec10 `\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf5 \strokec5 \}\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 function\cf4 \strokec4  \cf6 \strokec6 toAmzDate\cf5 \strokec5 (\cf7 \strokec7 d\cf5 \strokec5 )\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf6 \strokec6 pad\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf5 \strokec5 (\cf7 \strokec7 n\cf5 \strokec5 )\cf8 \strokec8  \cf2 \strokec2 =>\cf8 \strokec8  \cf6 \strokec6 String\cf8 \strokec8 (\cf2 \strokec2 n\cf8 \strokec8 )\cf5 \strokec5 .\cf6 \strokec6 padStart\cf8 \strokec8 (\cf7 \strokec7 2\cf5 \strokec5 ,\cf8 \strokec8  \cf10 \strokec10 "0"\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 return\cf4 \strokec4  (\cb1 \
+\cb3     \cf9 \strokec9 d\cf5 \strokec5 .\cf6 \strokec6 getUTCFullYear\cf4 \strokec4 () \cf2 \strokec2 +\cf4 \cb1 \strokec4 \
+\cb3     \cf6 \strokec6 pad\cf4 \strokec4 (\cf9 \strokec9 d\cf5 \strokec5 .\cf6 \strokec6 getUTCMonth\cf4 \strokec4 () \cf2 \strokec2 +\cf4 \strokec4  \cf7 \strokec7 1\cf4 \strokec4 ) \cf2 \strokec2 +\cf4 \cb1 \strokec4 \
+\cb3     \cf6 \strokec6 pad\cf4 \strokec4 (\cf9 \strokec9 d\cf5 \strokec5 .\cf6 \strokec6 getUTCDate\cf4 \strokec4 ()) \cf2 \strokec2 +\cf4 \cb1 \strokec4 \
+\cb3     \cf10 \strokec10 "T"\cf4 \strokec4  \cf2 \strokec2 +\cf4 \cb1 \strokec4 \
+\cb3     \cf6 \strokec6 pad\cf4 \strokec4 (\cf9 \strokec9 d\cf5 \strokec5 .\cf6 \strokec6 getUTCHours\cf4 \strokec4 ()) \cf2 \strokec2 +\cf4 \cb1 \strokec4 \
+\cb3     \cf6 \strokec6 pad\cf4 \strokec4 (\cf9 \strokec9 d\cf5 \strokec5 .\cf6 \strokec6 getUTCMinutes\cf4 \strokec4 ()) \cf2 \strokec2 +\cf4 \cb1 \strokec4 \
+\cb3     \cf6 \strokec6 pad\cf4 \strokec4 (\cf9 \strokec9 d\cf5 \strokec5 .\cf6 \strokec6 getUTCSeconds\cf4 \strokec4 ()) \cf2 \strokec2 +\cf4 \cb1 \strokec4 \
+\cb3     \cf10 \strokec10 "Z"\cf4 \cb1 \strokec4 \
+\cb3   )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 async\cf4 \strokec4  \cf2 \strokec2 function\cf4 \strokec4  \cf6 \strokec6 awsSigV4Sign\cf5 \strokec5 (\{\cf4 \strokec4  \cf7 \strokec7 method\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 url\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 host\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 region\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 service\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 amzDate\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 dateStamp\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 accessKeyId\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 secretAccessKey\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 payload\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 headers\cf4 \strokec4  \cf5 \strokec5 \})\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 urlObj\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 new\cf8 \strokec8  \cf6 \strokec6 URL\cf8 \strokec8 (\cf2 \strokec2 url\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 canonicalUri\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf9 \strokec9 urlObj\cf5 \strokec5 .\cf9 \strokec9 pathname\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 canonicalQuery\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf10 \strokec10 ""\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 payloadHash\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 await\cf8 \strokec8  \cf6 \strokec6 sha256HexBytes\cf8 \strokec8 (\cf2 \strokec2 new\cf8 \strokec8  \cf6 \strokec6 TextEncoder\cf8 \strokec8 ()\cf5 \strokec5 .\cf6 \strokec6 encode\cf8 \strokec8 (\cf2 \strokec2 payload\cf8 \strokec8 ))\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 lowerHeaders\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf5 \strokec5 \{\};\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 for\cf4 \strokec4  (\cf2 \strokec2 const\cf8 \strokec8  \cf5 \strokec5 [\cf9 \strokec9 k\cf5 \strokec5 ,\cf8 \strokec8  \cf9 \strokec9 v\cf5 \strokec5 ]\cf8 \strokec8  \cf2 \strokec2 of\cf4 \strokec4  \cf9 \strokec9 Object\cf5 \strokec5 .\cf6 \strokec6 entries\cf4 \strokec4 (\cf2 \strokec2 headers\cf4 \strokec4 )) \cf2 \strokec2 lowerHeaders\cf4 \strokec4 [\cf9 \strokec9 k\cf5 \strokec5 .\cf6 \strokec6 toLowerCase\cf4 \strokec4 ()] \cf2 \strokec2 =\cf4 \strokec4  \cf6 \strokec6 String\cf4 \strokec4 (\cf2 \strokec2 v\cf4 \strokec4 )\cf5 \strokec5 .\cf6 \strokec6 trim\cf4 \strokec4 ()\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 lowerHeaders\cf4 \strokec4 [\cf10 \strokec10 "host"\cf4 \strokec4 ] \cf2 \strokec2 =\cf4 \strokec4  \cf2 \strokec2 host\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 sortedHeaderKeys\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf9 \strokec9 Object\cf5 \strokec5 .\cf6 \strokec6 keys\cf8 \strokec8 (\cf2 \strokec2 lowerHeaders\cf8 \strokec8 )\cf5 \strokec5 .\cf6 \strokec6 sort\cf8 \strokec8 ()\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 canonicalHeaders\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf9 \strokec9 sortedHeaderKeys\cf5 \strokec5 .\cf6 \strokec6 map\cf8 \strokec8 (\cf5 \strokec5 (\cf7 \strokec7 k\cf5 \strokec5 )\cf8 \strokec8  \cf2 \strokec2 =>\cf8 \strokec8  \cf10 \strokec10 `\cf5 \strokec5 $\{\cf2 \strokec2 k\cf5 \strokec5 \}\cf10 \strokec10 :\cf5 \strokec5 $\{\cf2 \strokec2 lowerHeaders\cf10 \strokec10 [\cf2 \strokec2 k\cf10 \strokec10 ]\cf5 \strokec5 \}\cf11 \strokec11 \\n\cf10 \strokec10 `\cf8 \strokec8 )\cf5 \strokec5 .\cf6 \strokec6 join\cf8 \strokec8 (\cf10 \strokec10 ""\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 signedHeaders\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf9 \strokec9 sortedHeaderKeys\cf5 \strokec5 .\cf6 \strokec6 join\cf8 \strokec8 (\cf10 \strokec10 ";"\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 canonicalRequest\cf8 \strokec8  \cf2 \strokec2 =\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf8 \cb3 \strokec8     \cf2 \strokec2 method\cf8 \strokec8  \cf2 \strokec2 +\cf8 \strokec8  \cf10 \strokec10 "\cf11 \strokec11 \\n\cf10 \strokec10 "\cf8 \strokec8  \cf2 \strokec2 +\cf8 \strokec8  \cf2 \strokec2 canonicalUri\cf8 \strokec8  \cf2 \strokec2 +\cf8 \strokec8  \cf10 \strokec10 "\cf11 \strokec11 \\n\cf10 \strokec10 "\cf8 \strokec8  \cf2 \strokec2 +\cf8 \strokec8  \cf2 \strokec2 canonicalQuery\cf8 \strokec8  \cf2 \strokec2 +\cf8 \strokec8  \cf10 \strokec10 "\cf11 \strokec11 \\n\cf10 \strokec10 "\cf8 \strokec8  \cf2 \strokec2 +\cf8 \strokec8  \cf2 \strokec2 canonicalHeaders\cf8 \strokec8  \cf2 \strokec2 +\cf8 \strokec8  \cf10 \strokec10 "\cf11 \strokec11 \\n\cf10 \strokec10 "\cf8 \strokec8  \cf2 \strokec2 +\cf8 \strokec8  \cf2 \strokec2 signedHeaders\cf8 \strokec8  \cf2 \strokec2 +\cf8 \strokec8  \cf10 \strokec10 "\cf11 \strokec11 \\n\cf10 \strokec10 "\cf8 \strokec8  \cf2 \strokec2 +\cf8 \strokec8  \cf2 \strokec2 payloadHash\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 algorithm\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf10 \strokec10 "AWS4-HMAC-SHA256"\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 credentialScope\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf10 \strokec10 `\cf5 \strokec5 $\{\cf2 \strokec2 dateStamp\cf5 \strokec5 \}\cf10 \strokec10 /\cf5 \strokec5 $\{\cf2 \strokec2 region\cf5 \strokec5 \}\cf10 \strokec10 /\cf5 \strokec5 $\{\cf2 \strokec2 service\cf5 \strokec5 \}\cf10 \strokec10 /aws4_request`\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 stringToSign\cf8 \strokec8  \cf2 \strokec2 =\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf8 \cb3 \strokec8     \cf2 \strokec2 algorithm\cf8 \strokec8  \cf2 \strokec2 +\cf8 \strokec8  \cf10 \strokec10 "\cf11 \strokec11 \\n\cf10 \strokec10 "\cf8 \strokec8  \cf2 \strokec2 +\cf8 \strokec8  \cf2 \strokec2 amzDate\cf8 \strokec8  \cf2 \strokec2 +\cf8 \strokec8  \cf10 \strokec10 "\cf11 \strokec11 \\n\cf10 \strokec10 "\cf8 \strokec8  \cf2 \strokec2 +\cf8 \strokec8  \cf2 \strokec2 credentialScope\cf8 \strokec8  \cf2 \strokec2 +\cf8 \strokec8  \cf10 \strokec10 "\cf11 \strokec11 \\n\cf10 \strokec10 "\cf8 \strokec8  \cf2 \strokec2 +\cf8 \strokec8  (\cf2 \strokec2 await\cf8 \strokec8  \cf6 \strokec6 sha256HexBytes\cf8 \strokec8 (\cf2 \strokec2 new\cf8 \strokec8  \cf6 \strokec6 TextEncoder\cf8 \strokec8 ()\cf5 \strokec5 .\cf6 \strokec6 encode\cf8 \strokec8 (\cf2 \strokec2 canonicalRequest\cf8 \strokec8 )))\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 signingKey\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 await\cf8 \strokec8  \cf6 \strokec6 getSignatureKey\cf8 \strokec8 (\cf2 \strokec2 secretAccessKey\cf5 \strokec5 ,\cf8 \strokec8  \cf2 \strokec2 dateStamp\cf5 \strokec5 ,\cf8 \strokec8  \cf2 \strokec2 region\cf5 \strokec5 ,\cf8 \strokec8  \cf2 \strokec2 service\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 signature\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 await\cf8 \strokec8  \cf6 \strokec6 hmacHex\cf8 \strokec8 (\cf2 \strokec2 signingKey\cf5 \strokec5 ,\cf8 \strokec8  \cf2 \strokec2 stringToSign\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 authorization\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf10 \strokec10 `\cf5 \strokec5 $\{\cf2 \strokec2 algorithm\cf5 \strokec5 \}\cf10 \strokec10  Credential=\cf5 \strokec5 $\{\cf2 \strokec2 accessKeyId\cf5 \strokec5 \}\cf10 \strokec10 /\cf5 \strokec5 $\{\cf2 \strokec2 credentialScope\cf5 \strokec5 \}\cf10 \strokec10 , SignedHeaders=\cf5 \strokec5 $\{\cf2 \strokec2 signedHeaders\cf5 \strokec5 \}\cf10 \strokec10 , Signature=\cf5 \strokec5 $\{\cf2 \strokec2 signature\cf5 \strokec5 \}\cf10 \strokec10 `\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\cb3   \cf2 \strokec2 return\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3     headers\cf5 \strokec5 :\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\cb3       \cf2 \strokec2 ...\cf9 \strokec9 Object\cf5 \strokec5 .\cf6 \strokec6 fromEntries\cf4 \strokec4 (\cf9 \strokec9 Object\cf5 \strokec5 .\cf6 \strokec6 entries\cf4 \strokec4 (\cf2 \strokec2 lowerHeaders\cf4 \strokec4 )\cf5 \strokec5 .\cf6 \strokec6 map\cf4 \strokec4 (\cf5 \strokec5 ([\cf7 \strokec7 k\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 v\cf5 \strokec5 ])\cf4 \strokec4  \cf2 \strokec2 =>\cf4 \strokec4  [\cf2 \strokec2 k\cf5 \strokec5 ,\cf4 \strokec4  \cf2 \strokec2 v\cf4 \strokec4 ]))\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cb3       Authorization\cf5 \strokec5 :\cf4 \strokec4  \cf2 \strokec2 authorization\cf5 \strokec5 ,\cf4 \cb1 \strokec4 \
+\cb3     \cf5 \strokec5 \},\cf4 \cb1 \strokec4 \
+\cb3   \cf5 \strokec5 \};\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 async\cf4 \strokec4  \cf2 \strokec2 function\cf4 \strokec4  \cf6 \strokec6 sha256HexBytes\cf5 \strokec5 (\cf7 \strokec7 bytes\cf5 \strokec5 )\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 hash\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 await\cf8 \strokec8  \cf9 \strokec9 crypto\cf5 \strokec5 .\cf9 \strokec9 subtle\cf5 \strokec5 .\cf6 \strokec6 digest\cf8 \strokec8 (\cf10 \strokec10 "SHA-256"\cf5 \strokec5 ,\cf8 \strokec8  \cf2 \strokec2 bytes\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 return\cf4 \strokec4  [\cf2 \strokec2 ...new\cf4 \strokec4  \cf6 \strokec6 Uint8Array\cf4 \strokec4 (\cf2 \strokec2 hash\cf4 \strokec4 )]\cf5 \strokec5 .\cf6 \strokec6 map\cf4 \strokec4 (\cf5 \strokec5 (\cf7 \strokec7 b\cf5 \strokec5 )\cf4 \strokec4  \cf2 \strokec2 =>\cf4 \strokec4  \cf9 \strokec9 b\cf5 \strokec5 .\cf6 \strokec6 toString\cf4 \strokec4 (\cf7 \strokec7 16\cf4 \strokec4 )\cf5 \strokec5 .\cf6 \strokec6 padStart\cf4 \strokec4 (\cf7 \strokec7 2\cf5 \strokec5 ,\cf4 \strokec4  \cf10 \strokec10 "0"\cf4 \strokec4 ))\cf5 \strokec5 .\cf6 \strokec6 join\cf4 \strokec4 (\cf10 \strokec10 ""\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 async\cf4 \strokec4  \cf2 \strokec2 function\cf4 \strokec4  \cf6 \strokec6 hmacRaw\cf5 \strokec5 (\cf7 \strokec7 keyBytes\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 msg\cf5 \strokec5 )\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 key\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 await\cf8 \strokec8  \cf9 \strokec9 crypto\cf5 \strokec5 .\cf9 \strokec9 subtle\cf5 \strokec5 .\cf6 \strokec6 importKey\cf8 \strokec8 (\cf10 \strokec10 "raw"\cf5 \strokec5 ,\cf8 \strokec8  \cf2 \strokec2 keyBytes\cf5 \strokec5 ,\cf8 \strokec8  \cf5 \strokec5 \{\cf8 \strokec8  name\cf5 \strokec5 :\cf8 \strokec8  \cf10 \strokec10 "HMAC"\cf5 \strokec5 ,\cf8 \strokec8  hash\cf5 \strokec5 :\cf8 \strokec8  \cf10 \strokec10 "SHA-256"\cf8 \strokec8  \cf5 \strokec5 \},\cf8 \strokec8  false\cf5 \strokec5 ,\cf8 \strokec8  [\cf10 \strokec10 "sign"\cf8 \strokec8 ])\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 sig\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 await\cf8 \strokec8  \cf9 \strokec9 crypto\cf5 \strokec5 .\cf9 \strokec9 subtle\cf5 \strokec5 .\cf6 \strokec6 sign\cf8 \strokec8 (\cf10 \strokec10 "HMAC"\cf5 \strokec5 ,\cf8 \strokec8  \cf2 \strokec2 key\cf5 \strokec5 ,\cf8 \strokec8  \cf2 \strokec2 new\cf8 \strokec8  \cf6 \strokec6 TextEncoder\cf8 \strokec8 ()\cf5 \strokec5 .\cf6 \strokec6 encode\cf8 \strokec8 (\cf2 \strokec2 msg\cf8 \strokec8 ))\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 return\cf4 \strokec4  \cf2 \strokec2 new\cf4 \strokec4  \cf6 \strokec6 Uint8Array\cf4 \strokec4 (\cf2 \strokec2 sig\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 async\cf4 \strokec4  \cf2 \strokec2 function\cf4 \strokec4  \cf6 \strokec6 hmacHex\cf5 \strokec5 (\cf7 \strokec7 keyBytes\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 msg\cf5 \strokec5 )\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 raw\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 await\cf8 \strokec8  \cf6 \strokec6 hmacRaw\cf8 \strokec8 (\cf2 \strokec2 keyBytes\cf5 \strokec5 ,\cf8 \strokec8  \cf2 \strokec2 msg\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 return\cf4 \strokec4  [\cf2 \strokec2 ...raw\cf4 \strokec4 ]\cf5 \strokec5 .\cf6 \strokec6 map\cf4 \strokec4 (\cf5 \strokec5 (\cf7 \strokec7 b\cf5 \strokec5 )\cf4 \strokec4  \cf2 \strokec2 =>\cf4 \strokec4  \cf9 \strokec9 b\cf5 \strokec5 .\cf6 \strokec6 toString\cf4 \strokec4 (\cf7 \strokec7 16\cf4 \strokec4 )\cf5 \strokec5 .\cf6 \strokec6 padStart\cf4 \strokec4 (\cf7 \strokec7 2\cf5 \strokec5 ,\cf4 \strokec4  \cf10 \strokec10 "0"\cf4 \strokec4 ))\cf5 \strokec5 .\cf6 \strokec6 join\cf4 \strokec4 (\cf10 \strokec10 ""\cf4 \strokec4 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 async\cf4 \strokec4  \cf2 \strokec2 function\cf4 \strokec4  \cf6 \strokec6 getSignatureKey\cf5 \strokec5 (\cf7 \strokec7 secret\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 dateStamp\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 region\cf5 \strokec5 ,\cf4 \strokec4  \cf7 \strokec7 service\cf5 \strokec5 )\cf4 \strokec4  \cf5 \strokec5 \{\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 kDate\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 await\cf8 \strokec8  \cf6 \strokec6 hmacRaw\cf8 \strokec8 (\cf2 \strokec2 new\cf8 \strokec8  \cf6 \strokec6 TextEncoder\cf8 \strokec8 ()\cf5 \strokec5 .\cf6 \strokec6 encode\cf8 \strokec8 (\cf10 \strokec10 "AWS4"\cf8 \strokec8  \cf2 \strokec2 +\cf8 \strokec8  \cf2 \strokec2 secret\cf8 \strokec8 )\cf5 \strokec5 ,\cf8 \strokec8  \cf2 \strokec2 dateStamp\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 kRegion\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 await\cf8 \strokec8  \cf6 \strokec6 hmacRaw\cf8 \strokec8 (\cf2 \strokec2 kDate\cf5 \strokec5 ,\cf8 \strokec8  \cf2 \strokec2 region\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 kService\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 await\cf8 \strokec8  \cf6 \strokec6 hmacRaw\cf8 \strokec8 (\cf2 \strokec2 kRegion\cf5 \strokec5 ,\cf8 \strokec8  \cf2 \strokec2 service\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 kSigning\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf2 \strokec2 await\cf8 \strokec8  \cf6 \strokec6 hmacRaw\cf8 \strokec8 (\cf2 \strokec2 kService\cf5 \strokec5 ,\cf8 \strokec8  \cf10 \strokec10 "aws4_request"\cf8 \strokec8 )\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\cb3   \cf2 \strokec2 return\cf4 \strokec4  \cf2 \strokec2 kSigning\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 \}\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\i \cf4 \cb3 /* -------- HTML payloads (unchanged) -------- */
+\f0\i0 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 SENDER_HTML\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf10 \strokec10 `<!doctype html>\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf10 \cb3 \strokec10 <html lang="en">\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10 <head>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10   <meta charset="utf-8" />\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10   <meta name="viewport" content="width=device-width,initial-scale=1" />\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10   <title>SSNDR from Privisribe.ai</title>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10   <style>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     :root \{ color-scheme: light; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     body \{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; margin: 0; padding: 24px; background: #062b4f; color: #ffffff; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     .card \{ max-width: 560px; margin: 0 auto; border: 1px solid #2eaeea; border-radius: 12px; padding: 18px; background: #0b3158; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     h1 \{ margin: 0 0 12px; font-size: 20px; color: #ffffff; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     label \{ display:block; font-size: 13px; margin-top: 12px; color: #ffffff; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     input \{ width:100%; box-sizing:border-box; padding:10px; font-size: 16px; border:1px solid #2eaeea; border-radius: 10px; margin-top: 6px; background: #ffffff; color: #000000; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     button \{ margin-top: 16px; width:100%; padding: 12px; font-size: 16px; border:1px solid #2eaeea; border-radius: 10px; cursor:pointer; background: #0f3b69; color: #ffffff; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     .row \{ display:flex; gap: 10px; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     .row > div \{ flex:1; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     .hint \{ margin-top: 10px; font-size: 13px; color: #ffffff; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     .status \{ margin-top: 12px; font-size: 14px; white-space: pre-wrap; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     .mono \{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10   </style>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10 </head>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10 <body>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10   <div class="card">\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     <h1>SSNDR from Priviscribe.AI</h1>\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10     <label for="doctorName">Doctor name (appears partly covered in email)</label>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     <input id="doctorName" autocomplete="name" placeholder="Your name" />\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10     <label for="recipientEmail">Recipient email</label>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     <input id="recipientEmail" autocomplete="off" placeholder="credentialing@clinic.com" />\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10     <div class="row">\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10              <div>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         <label for="ssn1">SSN</label>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         <div style="display:flex; gap:8px; align-items:center;">\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10           <input id="ssn1" type="password" inputmode="numeric" autocomplete="off" placeholder="123-45-6789" style="flex:1;" />\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10           <button id="ssnRevealBtn" type="button" style="margin-top:6px; width:auto; padding:10px 12px;">\uc0\u55357 \u56385 </button>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         </div>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       </div>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     </div>\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10     <button id="sendBtn">Send secure link</button>\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10     <div class="hint">\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       Your SSN will be displayed only twice to the recipient. Expires in 30 days. Then, your SSN is deleted.\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     </div>\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10     <div id="status" class="status"></div>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10   </div>\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10   <script>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     function normalizeSSN(s) \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       return (s || "").replace(/[^\cf11 \strokec11 \\\\\cf10 \strokec10 d]/g, "");\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     \}\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10     async function postJson(url, body) \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       const res = await fetch(url, \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         method: "POST",\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         headers: \{ "content-type": "application/json" \},\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         body: JSON.stringify(body),\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       \});\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       const text = await res.text();\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       let data = null;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       try \{ data = JSON.parse(text); \} catch \{ data = \{ raw: text \}; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       if (!res.ok) \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         const msg = (data && (data.error || data.message || data.detail)) ? (data.error || data.message || data.detail) : ("HTTP " + res.status);\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         throw new Error(msg);\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       return data;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     \}\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10     const statusEl = document.getElementById("status");\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     const sendBtn = document.getElementById("sendBtn");\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         const ssn1El = document.getElementById("ssn1");\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     const revealBtn = document.getElementById("ssnRevealBtn");\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10     function showSSN() \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       ssn1El.type = "text";\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     \}\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10     function hideSSN() \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       ssn1El.type = "password";\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     \}\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10     revealBtn.addEventListener("pointerdown", showSSN);\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     revealBtn.addEventListener("pointerup", hideSSN);\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     revealBtn.addEventListener("pointerleave", hideSSN);\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     revealBtn.addEventListener("pointercancel", hideSSN);\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10     sendBtn.addEventListener("click", async () => \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       statusEl.textContent = "";\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       sendBtn.disabled = true;\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10       try \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         const doctorName = (document.getElementById("doctorName").value || "").trim();\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         const recipientEmail = (document.getElementById("recipientEmail").value || "").trim();\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10         const s1 = normalizeSSN(document.getElementById("ssn1").value);\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10         if (!doctorName) throw new Error("Doctor name is required.");\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         if (!recipientEmail) throw new Error("Recipient email is required.");\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         if (s1.length !== 9) throw new Error("SSN must have 9 digits.");\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10         const data = await postJson("/api/create", \{ doctorName, recipientEmail, ssn: s1 \});\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10         \cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10           statusEl.textContent = "Secure message sent.";\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         statusEl.classList.add("mono");\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10         document.getElementById("ssn1").value = "";\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       \} catch (e) \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         statusEl.textContent = "Error: " + e.message;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       \} finally \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         sendBtn.disabled = false;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     \});\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10   </script>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10 </body>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10 </html>`\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 const\cf8 \strokec8  \cf9 \strokec9 VIEWER_HTML\cf8 \strokec8  \cf2 \strokec2 =\cf8 \strokec8  \cf10 \strokec10 `<!doctype html>\cf4 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf10 \cb3 \strokec10 <html lang="en">\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10 <head>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10   <meta charset="utf-8" />\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10   <meta name="viewport" content="width=device-width,initial-scale=1" />\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10   <title>SSNDR from Priviscribe.ai</title>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10   <style>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     :root \{ color-scheme: dark; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     body \{ margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background:#0b0b0d; color:#f2f2f2; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     .wrap \{ min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     .card \{ width:min(720px, 100%); border:1px solid #2a2a2f; border-radius: 16px; padding: 18px; background: rgba(20,20,24,0.92); \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     h1 \{ margin: 0 0 10px; font-size: 18px; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     .sub \{ font-size: 14px; color:#b9b9c2; line-height: 1.35; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     .row \{ display:flex; gap: 12px; align-items:center; margin-top: 14px; flex-wrap: wrap; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     button \{ padding: 10px 14px; border-radius: 12px; border: 1px solid #3a3a44; background:#17171c; color:#fff; font-size: 14px; cursor:pointer; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     button:disabled \{ opacity: 0.6; cursor: not-allowed; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     .status \{ margin-top: 10px; font-size: 14px; color:#d1d1db; white-space: pre-wrap; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     canvas \{ width: 100%; height: 220px; border-radius: 14px; border:1px solid #2a2a2f; background: #0e0e12; margin-top: 14px; display:block; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     .meter \{ height: 10px; border-radius: 999px; background:#1a1a22; border:1px solid #2a2a2f; overflow:hidden; margin-top: 14px; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     .bar \{ height:100%; width:0%; background:#ffffff; opacity:0.55; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     .tiny \{ margin-top: 10px; font-size: 12px; color:#9c9cac; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10   </style>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10 </head>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10 <body>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10   <div class="wrap">\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     <div class="card">\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     <h1><strong>Priviscribe.ai</strong>&nbsp;&nbsp;&nbsp;Medical credentialing solved by AI</h1>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10             <div class="sub" id="headline">\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10                 A secure display will begin when you click below. Please be ready to enter it where needed.\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       </div>\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10       <div class="row">\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         <button id="beginBtn">Begin</button>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         <button id="stopBtn" disabled>Stop</button>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       </div>\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10       <div class="meter" aria-hidden="true"><div class="bar" id="bar"></div></div>\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10       <canvas id="c"></canvas>\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10       <div class="status" id="status"></div>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10 <div class="tiny">2 views maximum.</div>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10   </div>\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10   <script>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     function getTokenFromPath() \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       const parts = location.pathname.split("/").filter(Boolean);\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       return parts.length ? parts[parts.length - 1] : "";\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     \}\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10     async function getJson(url) \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       const res = await fetch(url, \{ method: "GET" \});\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       const text = await res.text();\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       let data = null;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       try \{ data = JSON.parse(text); \} catch \{ data = \{ raw: text \}; \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       if (!res.ok) \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         const msg = (data && (data.error || data.message || data.detail)) ? (data.error || data.message || data.detail) : ("HTTP " + res.status);\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         throw new Error(msg);\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       return data;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     \}\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10     const token = getTokenFromPath();\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     const beginBtn = document.getElementById("beginBtn");\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     const stopBtn = document.getElementById("stopBtn");\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     const statusEl = document.getElementById("status");\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     const canvas = document.getElementById("c");\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     const bar = document.getElementById("bar");\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     const ctx = canvas.getContext("2d", \{ alpha: false \});\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10     let raf = null;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     let running = false;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     let ssn = null;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10 let sequence = [];\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10 let startTs = 0;\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10     function resizeCanvas() \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       const rect = canvas.getBoundingClientRect();\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       const dpr = Math.max(1, Math.floor(window.devicePixelRatio || 1));\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       canvas.width = Math.floor(rect.width * dpr);\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       canvas.height = Math.floor(rect.height * dpr);\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     \}\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10     function clearCanvas() \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       ctx.fillStyle = "#0e0e12";\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       const w = canvas.getBoundingClientRect().width;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       const h = canvas.getBoundingClientRect().height;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       ctx.fillRect(0, 0, w, h);\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     \}\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10     function drawNoisyDigit(digit, t) \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       const w = canvas.getBoundingClientRect().width;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       const h = canvas.getBoundingClientRect().height;\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10       ctx.fillStyle = "#0e0e12";\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       ctx.fillRect(0, 0, w, h);\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10       const noiseCount = 900;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       for (let i = 0; i < noiseCount; i++) \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         const x = Math.random() * w;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         const y = Math.random() * h;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         const a = 0.02 + Math.random() * 0.08;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         ctx.fillStyle = \cf11 \strokec11 \\`\cf10 \strokec10 rgba(255,255,255,\cf11 \strokec11 \\$\cf10 \strokec10 \{a\})\cf11 \strokec11 \\`\cf10 \strokec10 ;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         ctx.fillRect(x, y, 1, 1);\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       \}\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10       ctx.save();\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       ctx.globalAlpha = 0.14;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       ctx.fillStyle = "#ffffff";\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       ctx.font = "12px -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Arial";\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       const wm = "Priviscribe.AI";\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       const yy = 18 + ((t / 30) % 1) * (h - 36);\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       ctx.fillText(wm, 14, yy);\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       ctx.restore();\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10       ctx.save();\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       const jitterX = (Math.random() - 0.5) * 4;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       const jitterY = (Math.random() - 0.5) * 4;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       const rot = (Math.random() - 0.5) * 0.05;\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10       ctx.translate(w / 2 + jitterX, h / 2 + jitterY);\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       ctx.rotate(rot);\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10       ctx.font = "140px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, monospace";\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       ctx.textAlign = "center";\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       ctx.textBaseline = "middle";\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10       ctx.globalAlpha = 0.90;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       ctx.fillStyle = "#ffffff";\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       ctx.fillText(digit, 0, 0);\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10       ctx.globalAlpha = 0.20;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       for (let i = 0; i < 7; i++) \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         ctx.strokeStyle = "rgba(255,255,255,0.22)";\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         ctx.lineWidth = 1;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         ctx.beginPath();\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         ctx.moveTo(-220, (Math.random()-0.5)*120);\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         ctx.lineTo(220, (Math.random()-0.5)*120);\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         ctx.stroke();\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       \}\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10       ctx.restore();\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     \}\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10     function stop() \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       running = false;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       beginBtn.disabled = false;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       stopBtn.disabled = true;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       if (raf) cancelAnimationFrame(raf);\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       raf = null;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       bar.style.width = "0%";\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       clearCanvas();\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     \}\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10     function tick(ts) \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       if (!running) return;\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10       const elapsed = (ts - startTs) / 1000;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       const total = 60;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       const pct = Math.min(100, (elapsed / total) * 100);\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       bar.style.width = pct.toFixed(1) + "%";\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10       const perDigit = total / 9;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       digitIndex = Math.min(8, Math.floor(elapsed / perDigit));\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10       const currentDigit = ssn[digitIndex];\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       drawNoisyDigit(currentDigit, elapsed);\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10       if (elapsed >= total) \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         stop();\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         statusEl.textContent = "Done.";\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         return;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       \}\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10       raf = requestAnimationFrame(tick);\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     \}\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10     beginBtn.addEventListener("click", async () => \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       statusEl.textContent = "";\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       if (!token) \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         statusEl.textContent = "Invalid link (missing token).";\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         return;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       \}\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10       beginBtn.disabled = true;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       stopBtn.disabled = false;\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10       try \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         resizeCanvas();\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         clearCanvas();\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10         const data = await getJson(\cf11 \strokec11 \\`\cf10 \strokec10 /api/claim/\cf11 \strokec11 \\$\cf10 \strokec10 \{encodeURIComponent(token)\}\cf11 \strokec11 \\`\cf10 \strokec10 );\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         const raw = (data && data.ssn) ? String(data.ssn) : "";\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         const digits = raw.replace(/[^\cf11 \strokec11 \\\\\cf10 \strokec10 d]/g, "");\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10         if (digits.length !== 9) throw new Error("SSN not available (expired / out of views / invalid).");\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10         ssn = digits;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         running = true;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         startTs = performance.now();\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         raf = requestAnimationFrame(tick);\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       \} catch (e) \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         statusEl.textContent = "Error: " + e.message;\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10         stop();\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       \}\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     \});\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10     stopBtn.addEventListener("click", () => \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       statusEl.textContent = "Stopped.";\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       stop();\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     \});\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10     window.addEventListener("resize", () => \{\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       resizeCanvas();\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10       clearCanvas();\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     \});\cf4 \cb1 \strokec4 \
+\
+\cf10 \cb3 \strokec10     resizeCanvas();\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10     clearCanvas();\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10   </script>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10 </body>\cf4 \cb1 \strokec4 \
+\cf10 \cb3 \strokec10 </html>`\cf5 \strokec5 ;\cf4 \cb1 \strokec4 \
+\
+}
